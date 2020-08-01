@@ -1,0 +1,250 @@
+//CHECKBOX
+@mixin checkbox1 {
+    &-input1{
+        appearance: none;
+        -webkit-appearance: none;
+        position: absolute;
+        &:checked + .checkbox-label1::before{
+            border-color: #31a5e7;
+        }
+        &:checked + .checkbox-label1::after{
+            opacity: 1;
+        }
+        &:checked ~ .checkbox-active1{
+            opacity: 1;
+        }
+       
+    }
+    &-label1{
+        &:hover{
+            cursor: pointer;
+        }
+    @include label-checkbox-style;
+        &::before{
+            left: 0;
+            top: 0;
+        }
+        &::after{
+            left: 3px;
+            top: 3px;
+        }
+    }
+    .checkbox-active1{
+        font-family: $input-text;
+        font-size: 14px;
+        color: #aaa9a9;
+        opacity: 0;
+    }
+}
+@mixin checkbox2 {
+    &-input2{
+        appearance: none;
+        -webkit-appearance: none;
+        position: absolute;
+        &:checked + .checkbox-label2::before{
+            border-color: #31a5e7;
+        }
+        &:checked + .checkbox-label2::after{
+            opacity: 1;
+        }
+        &:checked ~ .checkbox-active2{
+            opacity: 1;
+        }
+    }
+    &-label2{
+        &:hover{
+            cursor: pointer;
+        }
+       @include label-checkbox-style2;
+}
+.checkbox-active2{
+    font-family: $input-text;
+    font-size: 14px;
+    color: #aaa9a9;
+    opacity: 0;
+}
+}
+@mixin label-checkbox-style {
+    font-family: $input-text;
+    font-size: 14px;
+    color: #aaa9a9;
+    padding-left: 25px;
+    &::before{
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #464646;
+        background-color: #ffffff;
+        position: absolute;
+        z-index: 1;
+    }
+    &::after{
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url(/img/check.svg) no-repeat;
+        background-size: 12px 12px;
+        position: absolute;
+        z-index: 2;
+        opacity: 0;
+    }
+}
+@mixin label-checkbox-style2 {
+    @include label-checkbox-style;
+    &::before{
+        left: 0;
+        top: 30px;
+    }
+    &::after{
+        left: 3px;
+        top: 33px;
+    }
+    
+}
+
+//RADIO
+@mixin Radio1 {
+    position: relative;
+            &-input1{
+                appearance: none;
+                -webkit-appearance: none;
+                position: absolute;
+                &:checked + .radio-label1::before{
+                    border-color: #31a5e7;
+                }
+                &:checked + .radio-label1::after{
+                    opacity: 1;
+                }
+                &:checked ~ .radio-active1{
+                    opacity: 1;
+                }
+            }
+            &-label1{
+                @include label-radio-style;
+               
+            }
+            .radio-active1{
+                font-family: $input-text;
+                font-size: 14px;
+                color: #aaa9a9;
+                opacity: 0;
+            }
+}
+@mixin Radio2 {
+    position: relative;
+    &-input2{
+        appearance: none;
+        -webkit-appearance: none;
+        position: absolute;
+        &:checked + .radio-label2::before{
+            border-color: #31a5e7;
+        }
+        &:checked + .radio-label2::after{
+            opacity: 1;
+        }
+        &:checked ~ .radio-active2{
+            opacity: 1;
+        }
+    }
+    &-label2{
+        @include label-radio-style2;
+       
+    }
+    .radio-active2{
+        font-family: $input-text;
+        font-size: 14px;
+        color: #aaa9a9;
+        opacity: 0;
+    }
+}
+@mixin label-radio-style {
+                font-family: $input-text;
+                font-size: 14px;
+                color: #aaa9a9;
+                padding-left: 25px;
+                &:hover{
+                    cursor: pointer;
+                }
+                &::before{
+                    content: "";
+                     display: block;
+                     width: 16px;
+                     height: 16px;
+                     border: 1px solid #828282;
+                     border-radius: 50%;
+                     background-color: #ffffff;
+                     position: absolute;
+                     z-index: 1;
+                }
+                &::after{
+                    content: "";
+                    display: block;
+                    width: 6px;
+                    height: 6px;
+                    position: absolute;
+                    z-index: 2;
+                    background-color: #31a5e7;
+                    border-radius: 50%;
+                    opacity: 0;
+                    left: 6px;
+                    top: 6px;
+                   
+                }
+}
+@mixin label-radio-style2{
+    font-family: $input-text;
+                font-size: 14px;
+                color: #aaa9a9;
+                padding-left: 25px;
+                &:hover{
+                    cursor: pointer;
+                }
+                &::before{
+                    content: "";
+                     display: block;
+                     width: 16px;
+                     height: 16px;
+                     border: 1px solid #828282;
+                     border-radius: 50%;
+                     background-color: #ffffff;
+                     position: absolute;
+                     z-index: 1;
+                }
+                &::after{
+                    content: "";
+                    display: block;
+                    width: 6px;
+                    height: 6px;
+                    position: absolute;
+                    z-index: 2;
+                    background-color: #31a5e7;
+                    border-radius: 50%;
+                    opacity: 0;
+                    left: 6px;
+                    top: 38px;
+                   
+                }
+}
+//SLIDER
+@mixin slider-arrow-style {
+    position: absolute;
+    top: 125px;
+    z-index: 999;
+    font-size: 0;
+    outline: none;
+    width: 42px;
+    height: 42px;
+    border: solid 1px #dadada;
+    background-size: 15px 15px;
+    background-position: center;
+    
+}
+@mixin hover-arrow-slider {
+    cursor: pointer;
+            background-size: 15px 15px;
+            background-position: center;
+            border: solid 1px #0049b0;
+            transition: 1s;
+}
