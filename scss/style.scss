@@ -5,23 +5,38 @@
 
 body{
     min-height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .header{
     margin-top: 30px;
     padding: 0 calc(50vw - 572px);
     &-top{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
        &__logo{
            margin-left: 13px;
        }
        &__search{
+           display: -webkit-box;
+           display: -ms-flexbox;
            display: flex;
-           align-items: center;
+           -webkit-box-align: center;
+               -ms-flex-align: center;
+                   align-items: center;
            border: 1px solid #a1a1a1;
         .search{
             width: 274px;
@@ -52,17 +67,24 @@ body{
     }
 }
 .main{
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     .menu{
         padding: 0 calc(50vw - 572px);
         background-color: #f4f5f7;
         margin-top: 23px;
+        position: -webkit-sticky;
         position: sticky;
         top: 0;
         z-index: 999;
         ul{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: start;
+            -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                    justify-content: start;
             padding: 0;
             margin: 0;
             .menu-item{                
@@ -104,8 +126,12 @@ body{
     .btn-block{
         padding: 0 calc(50vw - 572px);
         margin-bottom: 50px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     button{
         
         height: 45px;
@@ -151,8 +177,12 @@ body{
   }
   .inputs{
     padding: 0 calc(50vw - 572px);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
         .checkbox{
             position: relative;
             @include checkbox1;
@@ -176,15 +206,22 @@ body{
             }
             margin-left: 28px;
             &-input1{
-                appearance: none;
+                -moz-appearance: none;
+                     appearance: none;
                 -webkit-appearance: none;
                 position: absolute;
                 &:checked + .switcher-label1::before{
                     background-color: #34bf49;
+                    -webkit-transition: 1s ;
+                    -o-transition: 1s ;
                     transition: 1s ;
                 }
                 &:checked + .switcher-label1::after{
-                    transform: translateX(26px);
+                    -webkit-transform: translateX(26px);
+                        -ms-transform: translateX(26px);
+                            transform: translateX(26px);
+                    -webkit-transition: 1s;
+                    -o-transition: 1s;
                     transition: 1s;
                 }
                 &:checked ~ .switcher-active-off{
@@ -265,8 +302,12 @@ body{
         }
     }
     .slick-dots{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         li{
             list-style: none;
             border-radius: 50%;
@@ -305,10 +346,14 @@ body{
           }
           .slick-active {
             border:solid 2px #0049b0;
+            -webkit-transition: 1s;
+            -o-transition: 1s;
             transition: 1s;
           }
     }
     &-slid{
+        display: -webkit-box!important;
+        display: -ms-flexbox!important;
         display: flex!important;
         width: 100%;
         max-width: 756px;
@@ -372,6 +417,8 @@ body{
 .footer{
     padding: 0 calc(50vw - 572px);
     height: 341px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 35px;
  
@@ -400,20 +447,32 @@ body{
         width: 271px;
     }
     .wrapper-social-block{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: left;
+        -webkit-box-pack: left;
+            -ms-flex-pack: left;
+                justify-content: left;
     }
     .social-block-icon{
         width: 40px;
         height: 40px;
         background-color: #202020;
         margin-right: 10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         &:hover{
             cursor: pointer;
             background: #0049b0;
+            -webkit-transition: 1s;
+            -o-transition: 1s;
             transition: 1s;
         }
         i{
@@ -422,4 +481,3 @@ body{
         }
     }
 }
- 
